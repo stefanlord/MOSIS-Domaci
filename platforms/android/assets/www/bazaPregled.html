@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Baza Pregled</title>
+<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+<body background="img/sativa.png">
+
+ <div id="deviceready" class="blink">
+                <p class="event listening"></p>
+                <p class="event received"></p>
+            </div>
+<p>
+
+
+<button type="button" onclick="updateDB()">Baza</button>
+<label id="LabelaNaziv">Naziv: </label>
+<p>
+<img id="slikaBaza" src="img/planinalogo.png" onclick="selectPhoto()" width="100%" height="100%">
+<div id="social">
+<p>
+<button type="button" onclick="fbShare()">Facebook Share</button>
+<button type="button" onclick="instaShare()">Instagram Share</button>
+<button type="button" onclick="twitterShare()">Twitter Share</button>
+<button type="button" onclick="nizProba()">Markeri</button>
+<p>
+</div>
+<label id="LabelaOpis">Opis: </label>
+<p>
+<div id="map"></div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/baza.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO9Gw8b3e0m276n3-wQvDc5iu3EmEm3dE"></script>
+        <script>
+        document.addEventListener("deviceready", selectPhoto, false);
+        pozicioniranje();
+        </script>
+</body>
+</html>

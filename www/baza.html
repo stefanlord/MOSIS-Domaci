@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Baza</title>
+</head>
+<body background="img/sativa.png">
+ <div class="app">
+            
+            <div id="deviceready" class="blink">
+                <p class="event listening"></p>
+                <p class="event received"></p>
+            </div>
+            <p>
+            <div id="dugmici">
+                
+            </div>
+<p>Dugmici za rad sa bazom:</p>
+<button type="button" onclick="createDB()">Create</button>
+<p>
+<button type="button" onclick="insertDB()">Insert</button>
+<p>
+<button type="button" onclick="selectAllDB()">SelectAll</button>
+<p>
+<button type="button" onclick="clearTable()">ClearAll</button>
+<p>
+<button type="button" onclick="drTable()">drTable</button>
+<p>
+<div id="tabledata">
+            <table id="TableData" style="width:100%">
+   <tr>
+    <th>ID</th>
+    <th>Naziv</th> 
+    <th>Opis</th>
+    <th>Slika</th>
+  </tr>
+</table>
+        </div>
+         </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/baza.js"></script>
+        <script>
+        document.addEventListener("deviceready", bazaDugmici, false);
+        </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pretraga</title>
+	<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+<body>
+<div id="deviceready" class="blink">
+                <p class="event listening"></p>
+                <p class="event received"></p>
+            </div>
+
+<button type="button" onclick="imePretraga()">Pretraga Naziv</button>
+<input  id= "imePretraga" type="text" >
+<p>
+<button type="button" onclick="radius()">Pretraga Radius</button>
+<input  id= "radius" type="number" >
+<p>
+<button type="button" onclick="opisPretraga()">Pretraga Ključna reč</button>
+<input  id= "opisPretraga" type="text" >
+<p>
+<button type="button" onclick="pratiKretanje()">Asinhrono obaveštavanje</button>
+<input  id= "radiusPosmatranje" type="number" >
+<p>
+<div id="dugmici"></div>
+<div id="map"></div>
+<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/baza.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO9Gw8b3e0m276n3-wQvDc5iu3EmEm3dE"></script>
+        <script>
+        document.addEventListener("deviceready", imePretraga, false);
+        pozicioniranje();
+        </script>
+</body>
+</html>
